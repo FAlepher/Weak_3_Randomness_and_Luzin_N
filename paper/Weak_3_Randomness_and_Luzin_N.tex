@@ -69,6 +69,18 @@ The same $g$ reflects both $\WThree$ and $\MLR^{\djump}$, where
 $\MLR^{\djump}$ denotes Martin--L\"of randomness relative to $\djump$.
 \end{theorem}
 
+\noindent\textit{Formalization.} Theorems~1.1 and~2.1, Lemmas~2.2, 3.1, 4.1,
+and~4.2, and the computable extension of Lemma~5.2 have been formalized in
+Lean~4. The Lean proof of Theorem~1.1 establishes its full statement using
+the test definitions in Section~2. For Lemma~5.1 the development proves the
+homeomorphism and measure-scaling identity. It does not separately state
+an algorithm computing finite prefixes of the inverse address from a fast
+Cauchy name. The proof of Theorem~1.1 directly establishes the uniform
+effective pullback of test layers along the embedding.
+At \href{https://github.com/FAlepher/Weak_3_Randomness_and_Luzin_N/tree/4c52dff0973a7c2d9239bfe6c534c9066283b390}{commit \texttt{4c52dff} of the Lean repository},
+\texttt{\#print axioms} reports only \texttt{propext},
+\texttt{Classical.choice}, and \texttt{Quot.sound} for Theorem~1.1.
+
 The $\MLR^{\djump}$ assertion also settles the case $\alpha=2$ of the
 question about Martin--L\"of randomness relative to $\emptyset^{(\alpha)}$
 in the paragraph following Open Question~28 of \cite{PWY}. The numbered
