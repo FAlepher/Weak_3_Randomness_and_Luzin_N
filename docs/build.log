@@ -1,0 +1,201 @@
+ℹ [2988/3045] Built Weak_3_Randomness_and_Luzin_N.GuoScheduleRecords (8.2s)
+info: Weak_3_Randomness_and_Luzin_N/GuoScheduleRecords.lean:162:0: 'Guo.records_iff_all_witnesses' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [2989/3045] Built Weak_3_Randomness_and_Luzin_N.GuoSelectedStage (8.3s)
+info: Weak_3_Randomness_and_Luzin_N/GuoSelectedStage.lean:178:0: 'Guo.hits_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoSelectedStage.lean:179:0: 'Guo.inverse_prefix' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoSelectedStage.lean:180:0: 'Guo.inverse_hits' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoSelectedStage.lean:181:0: 'Guo.inverse_forward' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoSelectedStage.lean:182:0: 'Guo.forward_inverse' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoSelectedStage.lean:183:0: 'Guo.forward_bijective' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoSelectedStage.lean:184:0: 'Guo.stage_inverse_forward' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoSelectedStage.lean:185:0: 'Guo.stage_forward_inverse' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoSelectedStage.lean:186:0: 'Guo.stage_forward_bijective' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoSelectedStage.lean:187:0: 'Guo.stageForward' depends on axioms: [propext, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoSelectedStage.lean:188:0: 'Guo.stageInverse' depends on axioms: [propext, Quot.sound]
+ℹ [2990/3045] Built Weak_3_Randomness_and_Luzin_N.GuoFiniteStages (6.6s)
+info: Weak_3_Randomness_and_Luzin_N/GuoFiniteStages.lean:233:0: 'Guo.stage_bijective' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoFiniteStages.lean:234:0: 'Guo.stage_recovers_prefix' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [2991/3045] Built Weak_3_Randomness_and_Luzin_N.GuoOracleCode (14s)
+info: Weak_3_Randomness_and_Luzin_N/GuoOracleCode.lean:163:0: 'Guo.OracleCode.indexedShape_primrec' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoOracleCode.lean:164:0: 'Guo.OracleCode.decodeIndex_explicitIndex' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [2992/3045] Built Weak_3_Randomness_and_Luzin_N.GuoCantorCoding (5.5s)
+info: Weak_3_Randomness_and_Luzin_N/GuoCantorCoding.lean:192:0: 'Guo.cantorOutput_reads' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoCantorCoding.lean:193:0: 'Guo.StageAction.read_stored_prefix' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoCantorCoding.lean:194:0: 'Guo.cantorOutput' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [2993/3045] Built Weak_3_Randomness_and_Luzin_N.GuoLocalFinite (7.1s)
+info: Weak_3_Randomness_and_Luzin_N/GuoLocalFinite.lean:153:0: 'Guo.image_of_hit_cylinder' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoLocalFinite.lean:154:0: 'Guo.stored_prefix_stabilizes' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [2994/3045] Built Weak_3_Randomness_and_Luzin_N.GuoOracleJump (14s)
+info: Weak_3_Randomness_and_Luzin_N/GuoOracleJump.lean:152:0: 'Guo.oracleJump_decides_domain' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoOracleJump.lean:153:0: 'Guo.recursiveIn_oracleJump' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [2995/3045] Built Weak_3_Randomness_and_Luzin_N.GuoCandidateSchedule (6.2s)
+info: Weak_3_Randomness_and_Luzin_N/GuoCandidateSchedule.lean:114:0: 'Guo.candidate_recurrence_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoCandidateSchedule.lean:115:0: 'Guo.candidateSchedule' depends on axioms: [propext, Quot.sound]
+ℹ [2996/3045] Built Weak_3_Randomness_and_Luzin_N.GuoCantorMeasure (22s)
+info: Weak_3_Randomness_and_Luzin_N/GuoCantorMeasure.lean:178:0: 'Guo.fairCoin_cylinder' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoCantorMeasure.lean:179:0: 'Guo.fairCoin_stageReadingEvent' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [2997/3045] Built Weak_3_Randomness_and_Luzin_N.GuoOraclePlug (18s)
+info: Weak_3_Randomness_and_Luzin_N/GuoOraclePlug.lean:83:0: 'Guo.OracleCode.eval_plug' depends on axioms: [propext, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoOraclePlug.lean:84:0: 'Guo.OracleCode.plugIndex_primrec' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoOraclePlug.lean:85:0: 'Guo.OracleCode.plugIndex_encode' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [2998/3045] Built Weak_3_Randomness_and_Luzin_N.GuoOracleReplay (18s)
+info: Weak_3_Randomness_and_Luzin_N/GuoOracleReplay.lean:165:0: 'Guo.OracleCode.eval_finiteTable_iff' depends on axioms: [propext, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoOracleReplay.lean:166:0: 'Guo.OracleCode.eval_finiteTable_partrec' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [2999/3045] Built Weak_3_Randomness_and_Luzin_N.GuoCantorTopology (21s)
+info: Weak_3_Randomness_and_Luzin_N/GuoCantorTopology.lean:177:0: 'Guo.cantorOutput_measurePreserving' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3000/3045] Built Weak_3_Randomness_and_Luzin_N.GuoOracleCompiler (26s)
+info: Weak_3_Randomness_and_Luzin_N/GuoOracleCompiler.lean:406:0: 'Guo.OracleCode.eval_replayCode' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoOracleCompiler.lean:407:0: 'Guo.OracleCode.replayIndex_primrec' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoOracleCompiler.lean:408:0: 'Guo.OracleCode.replayIndex_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3001/3045] Built Weak_3_Randomness_and_Luzin_N.GuoWitness (26s)
+info: Weak_3_Randomness_and_Luzin_N/GuoWitness.lean:220:0: 'Guo.stableStorage_reads' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoWitness.lean:221:0: 'Guo.compact_null_witness' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3002/3045] Built Weak_3_Randomness_and_Luzin_N.GuoReflection (26s)
+info: Weak_3_Randomness_and_Luzin_N/GuoReflection.lean:166:0: 'Guo.failsMartinLof_of_failsWeak' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoReflection.lean:167:0: 'Guo.reflection_from_universal_test' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3003/3045] Built Weak_3_Randomness_and_Luzin_N.GuoRealTransfer (26s)
+info: Weak_3_Randomness_and_Luzin_N/GuoRealTransfer.lean:103:0: 'Guo.binaryEvaluation_oscillation' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoRealTransfer.lean:104:0: 'Guo.retainedLength_mass_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoRealTransfer.lean:105:0: 'Guo.real_compact_witness_of_pushforwards' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3004/3045] Built Weak_3_Randomness_and_Luzin_N.GuoCover (26s)
+info: Weak_3_Randomness_and_Luzin_N/GuoCover.lean:192:0: 'Guo.cover_cylinder_at_stage' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoCover.lean:193:0: 'Guo.cover_disjoint_cylinders' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoCover.lean:194:0: 'Guo.cover_open_at_recurrent_index' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoCover.lean:195:0: 'Guo.outer_measure_image_at_recurrent_index' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3005/3045] Built Weak_3_Randomness_and_Luzin_N.GuoEnumeratedOpen (26s)
+info: Weak_3_Randomness_and_Luzin_N/GuoEnumeratedOpen.lean:222:0: 'Guo.mem_removeEarlierCylinders' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoEnumeratedOpen.lean:223:0: 'Guo.refinedEnumeration_covers' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoEnumeratedOpen.lean:224:0: 'Guo.refinedEnumeration_stage_disjoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3006/3045] Built Weak_3_Randomness_and_Luzin_N.GuoLocalization (22s)
+info: Weak_3_Randomness_and_Luzin_N/GuoLocalization.lean:122:0: 'Guo.cantor_localization_of_schedule' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoLocalization.lean:123:0: 'Guo.candidate_coverage' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoLocalization.lean:124:0: 'Guo.cantor_localization_from_normal_form' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoLocalization.lean:125:0: 'Guo.null_image_on_complement' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3007/3045] Built Weak_3_Randomness_and_Luzin_N.GuoEnumeratedCover (22s)
+info: Weak_3_Randomness_and_Luzin_N/GuoEnumeratedCover.lean:220:0: 'Guo.enumerated_output_cover_spec' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoEnumeratedCover.lean:221:0: 'Guo.enumerated_local_cover' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoEnumeratedCover.lean:222:0: 'Guo.enumerated_local_cover_stream' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoEnumeratedCover.lean:223:0: 'Guo.coverEnumeration' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3008/3045] Built Weak_3_Randomness_and_Luzin_N.GuoBinaryMeasure (24s)
+info: Weak_3_Randomness_and_Luzin_N/GuoBinaryMeasure.lean:330:0: 'Guo.binaryEvaluation_map_fairCoin' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoBinaryMeasure.lean:331:0: 'Guo.binaryEvaluation_image_cylinder' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoBinaryMeasure.lean:332:0: 'Guo.binaryCylinderInterior_cover' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3009/3045] Built Weak_3_Randomness_and_Luzin_N.GuoFatCantor (24s)
+info: Weak_3_Randomness_and_Luzin_N/GuoFatCantor.lean:414:0: 'Guo.fatAddress_map_fairCoin' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoFatCantor.lean:415:0: 'Guo.fatAddress_extendRetained' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3010/3045] Built Weak_3_Randomness_and_Luzin_N.GuoCandidateComputable (23s)
+info: Weak_3_Randomness_and_Luzin_N/GuoCandidateComputable.lean:161:0: 'Guo.candidateSchedule_index_primrec' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoCandidateComputable.lean:162:0: 'Guo.candidateSchedule_outputWidth_primrec' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoCandidateComputable.lean:163:0: 'Guo.firstSuitableStage_primrec_of_index' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3011/3045] Built Weak_3_Randomness_and_Luzin_N.GuoAffineExtension (23s)
+info: Weak_3_Randomness_and_Luzin_N/GuoAffineExtension.lean:356:0: 'Guo.affineExtension_continuous' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoAffineExtension.lean:357:0: 'Guo.realAffineExtension_compact_witness' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoAffineExtension.lean:358:0: 'Guo.real_candidate_witness' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoAffineExtension.lean:359:0: 'Guo.realAffineExtension_locally_affine' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoAffineExtension.lean:360:0: 'Guo.rationalEndpointValue_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3012/3045] Built Weak_3_Randomness_and_Luzin_N.GuoOracleCover (28s)
+info: Weak_3_Randomness_and_Luzin_N/GuoOracleCover.lean:442:0: 'Guo.initialOracleStream_computableIn' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoOracleCover.lean:443:0: 'Guo.oracleUniform_local_cover' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoOracleCover.lean:444:0: 'Guo.effectiveLocalCover_from_candidate_kernels' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3013/3045] Built Weak_3_Randomness_and_Luzin_N.GuoPolygon (24s)
+info: Weak_3_Randomness_and_Luzin_N/GuoPolygon.lean:348:0: 'Guo.rationalPolygon_uniform_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3014/3045] Built Weak_3_Randomness_and_Luzin_N.GuoOracleMeasure (25s)
+info: Weak_3_Randomness_and_Luzin_N/GuoOracleMeasure.lean:213:0: 'Guo.finiteLayerMassCode_computableIn' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoOracleMeasure.lean:214:0: 'Guo.oracleLayer_measure_iSup' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3015/3045] Built Weak_3_Randomness_and_Luzin_N.GuoCandidateNormalForm (25s)
+info: Weak_3_Randomness_and_Luzin_N/GuoCandidateNormalForm.lean:133:0: 'Guo.indexedCandidateWords_word_primrec' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoCandidateNormalForm.lean:134:0: 'Guo.indexedCandidateWords_witness_primrec' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoCandidateNormalForm.lean:135:0: 'Guo.indexedCandidateWords_normalForm' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3016/3045] Built Weak_3_Randomness_and_Luzin_N.GuoCoverWordsComputable (25s)
+info: Weak_3_Randomness_and_Luzin_N/GuoCoverWordsComputable.lean:84:0: 'Guo.oracleWordsAtDepth_primrec' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoCoverWordsComputable.lean:85:0: 'Guo.coverWordsAt_primrec' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3017/3045] Built Weak_3_Randomness_and_Luzin_N.GuoStageComputable (26s)
+info: Weak_3_Randomness_and_Luzin_N/GuoStageComputable.lean:242:0: 'Guo.cantorOutput_listPrefix_primrec' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoStageComputable.lean:243:0: 'Guo.candidate_cantorOutput_listPrefix_primrec' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoStageComputable.lean:244:0: 'Guo.stageRead_listState_primrec' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3018/3045] Built Weak_3_Randomness_and_Luzin_N.GuoGapEndpoints (25s)
+info: Weak_3_Randomness_and_Luzin_N/GuoGapEndpoints.lean:57:0: 'Guo.realAffineExtension_internal_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3019/3045] Built Weak_3_Randomness_and_Luzin_N.GuoTypeTwoInterpolation (26s)
+info: Weak_3_Randomness_and_Luzin_N/GuoTypeTwoInterpolation.lean:130:0: 'Guo.affineExtension_lipschitz' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3020/3045] Built Weak_3_Randomness_and_Luzin_N.GuoRefinementComputable (25s)
+info: Weak_3_Randomness_and_Luzin_N/GuoRefinementComputable.lean:124:0: 'Guo.refinedOracleWords_primrec' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoRefinementComputable.lean:125:0: 'Guo.refinedOracleWords_encode' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3021/3045] Built Weak_3_Randomness_and_Luzin_N.GuoOracleNormalForm (26s)
+info: Weak_3_Randomness_and_Luzin_N/GuoOracleNormalForm.lean:246:0: 'Guo.oracleUniformOpen_quantifiedCylinder_of_binarySigmaTwo' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3022/3045] Built Weak_3_Randomness_and_Luzin_N.GuoOracleBudget (29s)
+info: Weak_3_Randomness_and_Luzin_N/GuoOracleBudget.lean:263:0: 'Guo.budgetStream_computableIn' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoOracleBudget.lean:264:0: 'Guo.budgetStream_preserves_small' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoOracleBudget.lean:265:0: 'Guo.universalTest_of_enumerated_family' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoOracleBudget.lean:266:0: 'Guo.universalTest_of_raw_enumerated_family' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3023/3045] Built Weak_3_Randomness_and_Luzin_N.GuoOracleRates (29s)
+info: Weak_3_Randomness_and_Luzin_N/GuoOracleRates.lean:203:0: 'Guo.oracleJump_effectiveRateSearch' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoOracleRates.lean:204:0: 'Guo.weakFailure_implies_secondJumpFailure' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3024/3045] Built Weak_3_Randomness_and_Luzin_N.GuoTypeTwoGrid (20s)
+info: Weak_3_Randomness_and_Luzin_N/GuoTypeTwoGrid.lean:431:0: 'Guo.gridRationalPolygon_lipschitz' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoTypeTwoGrid.lean:432:0: 'Guo.gridInterpolate_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoTypeTwoGrid.lean:433:0: 'Guo.gridInterpolate_primrec' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3025/3045] Built Weak_3_Randomness_and_Luzin_N.GuoKernelComputable (19s)
+info: Weak_3_Randomness_and_Luzin_N/GuoKernelComputable.lean:95:0: 'Guo.oracleCoverKernel_primrec_of_components' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoKernelComputable.lean:96:0: 'Guo.candidate_oracleCoverKernel_primrec' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoKernelComputable.lean:97:0: 'Guo.effectiveLocalCover_from_primitive_candidates' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3026/3045] Built Weak_3_Randomness_and_Luzin_N.GuoOracleUniversal (19s)
+info: Weak_3_Randomness_and_Luzin_N/GuoOracleUniversal.lean:141:0: 'Guo.rawReplayFamily_complete' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoOracleUniversal.lean:142:0: 'Guo.exists_universalMartinLofTest_of_total' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoOracleUniversal.lean:143:0: 'Guo.exists_universalMartinLofTest_secondJump' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3027/3045] Built Weak_3_Randomness_and_Luzin_N.GuoJumpArithmetic (20s)
+info: Weak_3_Randomness_and_Luzin_N/GuoJumpArithmetic.lean:276:0: 'Guo.secondJump_binarySigmaTwo' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3028/3045] Built Weak_3_Randomness_and_Luzin_N.GuoRealOracleTests (20s)
+info: Weak_3_Randomness_and_Luzin_N/GuoRealOracleTests.lean:289:0: 'Guo.binaryEvaluation_uniform_test_layers' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoRealOracleTests.lean:290:0: 'Guo.isBinaryDyadic_failsMartinLof' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoRealOracleTests.lean:291:0: 'Guo.binaryEvaluation_transfers_martinLofFailure' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoRealOracleTests.lean:292:0: 'Guo.binaryEvaluation_transfers_weakFailure' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3029/3045] Built Weak_3_Randomness_and_Luzin_N.GuoCoverIndex (19s)
+info: Weak_3_Randomness_and_Luzin_N/GuoCoverIndex.lean:126:0: 'Guo.oracleCoverStream_uniform_index' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3030/3045] Built Weak_3_Randomness_and_Luzin_N.GuoEndpointComputable (19s)
+info: Weak_3_Randomness_and_Luzin_N/GuoEndpointComputable.lean:88:0: 'Guo.rationalEndpointCode_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoEndpointComputable.lean:89:0: 'Guo.rationalEndpointCode_primrec' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoEndpointComputable.lean:90:0: 'Guo.candidate_rationalEndpointCode_primrec' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3031/3045] Built Weak_3_Randomness_and_Luzin_N.GuoRealOraclePullback (20s)
+info: Weak_3_Randomness_and_Luzin_N/GuoRealOraclePullback.lean:265:0: 'Guo.retainedInterval_eq_grid' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoRealOraclePullback.lean:266:0: 'Guo.fatAddress_uniform_test_pullback' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoRealOraclePullback.lean:267:0: 'Guo.fatAddress_pulls_back_weakFailure' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoRealOraclePullback.lean:268:0: 'Guo.fatAddress_pulls_back_martinLofFailure' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3032/3045] Built Weak_3_Randomness_and_Luzin_N.GuoCombined (22s)
+info: Weak_3_Randomness_and_Luzin_N/GuoCombined.lean:116:0: 'Guo.candidate_witness_and_cantor_reflection' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoCombined.lean:117:0: 'Guo.candidate_witness_and_real_reflection_on_fatCantor' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoCombined.lean:118:0: 'Guo.quantifiedCylinder_witness_and_real_reflection_on_fatCantor' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3033/3045] Built Weak_3_Randomness_and_Luzin_N.GuoTypeTwoVertices (22s)
+info: Weak_3_Randomness_and_Luzin_N/GuoTypeTwoVertices.lean:151:0: 'Guo.candidate_uniform_polygon_approximation' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [3034/3045] Built Weak_3_Randomness_and_Luzin_N.GuoOutsideReflectionCodes (23s)
+ℹ [3035/3045] Built Weak_3_Randomness_and_Luzin_N.GuoEndpointTests (23s)
+info: Weak_3_Randomness_and_Luzin_N/GuoEndpointTests.lean:72:0: 'Guo.realFailsMartinLof_of_dyadic_approximation' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoEndpointTests.lean:73:0: 'Guo.retainedEndpoint_failsMartinLof' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3036/3045] Built Weak_3_Randomness_and_Luzin_N.GuoConcreteReflection (17s)
+info: Weak_3_Randomness_and_Luzin_N/GuoConcreteReflection.lean:47:0: 'Guo.secondJump_openLayer_normalForm' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoConcreteReflection.lean:48:0: 'Guo.real_reflection_on_fatCantor' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3037/3045] Built Weak_3_Randomness_and_Luzin_N.GuoOutsideReflection (19s)
+info: Weak_3_Randomness_and_Luzin_N/GuoOutsideReflection.lean:363:0: 'Guo.affineImage_uniform' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoOutsideReflection.lean:364:0: 'Guo.affine_transfers_weakFailure' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoOutsideReflection.lean:365:0: 'Guo.affine_transfers_martinLofFailure' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3038/3045] Built Weak_3_Randomness_and_Luzin_N.GuoTypeTwo (24s)
+info: Weak_3_Randomness_and_Luzin_N/GuoTypeTwo.lean:228:0: 'Guo.candidate_realAffineExtension_typeTwoComputable' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3039/3045] Built Weak_3_Randomness_and_Luzin_N.GuoEffectiveLocalization (20s)
+info: Weak_3_Randomness_and_Luzin_N/GuoEffectiveLocalization.lean:186:0: 'Guo.cantor_localization' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoEffectiveLocalization.lean:187:0: 'Guo.cantor_reflection_large_class' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoEffectiveLocalization.lean:188:0: 'Guo.candidate_recurrent_index_cover' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3040/3045] Built Weak_3_Randomness_and_Luzin_N.GuoOutsideReflectionBridge (20s)
+info: Weak_3_Randomness_and_Luzin_N/GuoOutsideReflectionBridge.lean:172:0: 'Guo.affineBridge_fractionEnclosure' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoOutsideReflectionBridge.lean:173:0: 'Guo.candidate_bridge_fractionEnclosure' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3041/3045] Built Weak_3_Randomness_and_Luzin_N.GuoRealRationalBasis (21s)
+info: Weak_3_Randomness_and_Luzin_N/GuoRealRationalBasis.lean:177:0: 'Guo.rationalOracleUniformOpen_iff_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoRealRationalBasis.lean:178:0: 'Guo.rationalWeakTest_iff_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoRealRationalBasis.lean:179:0: 'Guo.rationalMartinLofTest_iff_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3042/3045] Built Weak_3_Randomness_and_Luzin_N.GuoOutsideCandidate (21s)
+info: Weak_3_Randomness_and_Luzin_N/GuoOutsideCandidate.lean:83:0: 'Guo.candidate_realAffineExtension_reflects_outside' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3043/3045] Built Weak_3_Randomness_and_Luzin_N.GuoMain (15s)
+info: Weak_3_Randomness_and_Luzin_N/GuoMain.lean:61:0: 'Guo.weakThreeRandomness_and_realNullImage' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Weak_3_Randomness_and_Luzin_N/GuoMain.lean:62:0: 'Guo.exists_reflecting_not_luzinN' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [3044/3045] Built Weak_3_Randomness_and_Luzin_N (15s)
+Build completed successfully (3045 jobs).

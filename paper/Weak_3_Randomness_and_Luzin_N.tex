@@ -1,0 +1,596 @@
+\documentclass[12pt,reqno]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,microtype}
+\usepackage[a4paper,left=32mm,right=32mm,top=27mm,bottom=27mm,headheight=14pt,headsep=15pt]{geometry}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Weak 3-randomness reflection does not imply Luzin's property (N)},
+  pdfauthor={Zihao Guo},pdfsubject={Algorithmic randomness and computable real functions}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\Cantor}{2^\omega}
+\newcommand{\WThree}{\mathrm{W3R}}
+\newcommand{\MLR}{\mathrm{MLR}}
+\newcommand{\pre}{\mathbin{\upharpoonright}}
+\newcommand{\Nprop}{\mathrm{(N)}}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\mass}{\mu}
+\newcommand{\lebesgue}{\lambda}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\jump}{\emptyset'}
+\newcommand{\djump}{\emptyset''}
+\title[Weak 3-randomness reflection and Luzin's (N)]{Weak 3-randomness reflection does not imply\\ Luzin's property \texorpdfstring{$\Nprop$}{(N)}}
+\author{Zihao Guo}
+\date{November 21, 2026}
+\subjclass[2020]{Primary 03D32. Secondary 03F60, 26A30.}
+\keywords{Weak 3-randomness, randomness reflection, Luzin's property (N), computable real functions}
+\begin{document}
+\begin{abstract}
+We construct a computable continuous real function which reflects both
+weak 3-randomness and Martin--L\"of randomness relative to the second
+Turing jump, but fails Luzin's property $\Nprop$. In particular, it maps
+the set of reals failing weak 3-randomness into itself, answering a question
+of Pauly, Westrick and Yu. The construction gives a localization theorem:
+for every positive-measure $\Pi^0_1(\djump)$ class $A$ in Cantor space
+there is a computable measure-preserving map that admits local effective
+bounds on forward images off $A$, while sending a compact null subset
+of $A$ to a set of measure at least $\mass(A)$.
+
+\end{abstract}
+\maketitle
+
+\section{Introduction}
+
+Which null sets suffice to detect that a computable real function fails
+Luzin's property $\Nprop$? The property requires that every Lebesgue
+null set have null image. A test of weak 3-randomness supplies a natural
+candidate for detecting failure: its intersection is null and can be
+specified by a sequence of open sets enumerable relative to the halting
+problem. Pauly, Westrick and Yu ask whether a computable function can
+take the union of all such test intersections to a null set and still
+fail $\Nprop$ \cite[\S3.4, Open Question~29]{PWY}.
+
+Write $\WThree$ for the weakly 3-random reals. A function $g$ reflects
+a randomness class $\mathcal R$ if $g(x)\in\mathcal R$ implies
+$x\in\mathcal R$ for every $x$. For $\mathcal R=\WThree$, reflection
+says that $g[\RR\setminus\WThree]\subseteq\RR\setminus\WThree$.
+The right-hand side is a countable union of null sets, so this inclusion
+implies the null-image condition of Question~29. Westrick explicitly
+asks whether such reflection implies $\Nprop$ \cite[slide~9]{W}.
+The following example answers both questions.
+
+\begin{theorem}\label{thm:main}
+For every $0<\eps<1$ there are a computable continuous function
+$g:\RR\to[0,1]$ and a compact set $B\subseteq[0,1]$ such that
+\[
+   \lebesgue(B)=0,\qquad \lebesgue(g[B])\ge 1-\eps .
+\]
+The same $g$ reflects both $\WThree$ and $\MLR^{\djump}$, where
+$\MLR^{\djump}$ denotes Martin--L\"of randomness relative to $\djump$.
+\end{theorem}
+
+The $\MLR^{\djump}$ assertion also settles the case $\alpha=2$ of the
+question about Martin--L\"of randomness relative to $\emptyset^{(\alpha)}$
+in the paragraph following Open Question~28 of \cite{PWY}. The numbered
+Question~28 itself concerns $\Delta^1_1$-randomness.
+
+For comparison, $\Pi^1_1$-randomness reflection characterizes $\Nprop$
+for computable functions \cite{PWY}. At lower levels the same authors
+give a counterexample reflecting Martin--L\"of randomness, weak
+2-randomness and Martin--L\"of randomness relative to $\jump$
+\cite[Corollary~31]{PWY}. Their localization theorem makes the function
+locally piecewise linear outside a $\Pi^0_1(\jump)$ class and places a
+compact null witness of complexity $\Pi^0_1(\djump)$ inside it
+\cite[Theorem~30]{PWY}. Such a witness is itself a null $\Pi^0_2(\jump)$
+set. Its positive-measure image contains a weakly 3-random point, although
+none of its inputs are weakly 3-random. This explains precisely why their
+example fails to reflect $\WThree$. The descriptive-set-theoretic
+construction of Holick\'y, Ponomarev, Zaj\'i\v cek and Zelen\'y
+\cite{HPZZ} likewise gives an effective null witness in the instances
+discussed immediately after Question~29 of \cite{PWY}.
+
+
+For a computable real function the locus of local piecewise linearity
+is $\Sigma^0_1(\jump)$ in the sense of \cite[Proposition~32]{PWY}.
+Thus, if a computable function is locally piecewise linear at every
+point that fails weak 3-randomness, it is locally piecewise linear
+throughout $\RR$.\footnote{Any nonempty complementary
+$\Pi^0_1(\jump)$ class meets a compact
+interval with rational endpoints. A path search relative to $\djump$
+in that interval yields a $\djump$-computable point.
+Its singleton is a null $\Pi^0_2(\jump)$ set, so the point fails
+weak 3-randomness.}
+
+Our construction moves the prescribed closed class up one jump. Its
+complement need only admit local bounds for the cost of covering forward
+images. This change allows a computable map to act on a cylinder whenever
+finite evidence supports it, even if that evidence eventually stops.
+Inside the closed class the map retains enough of a second coordinate
+to produce a compact null witness by taking a section. The closed class
+can be chosen to consist entirely of $\MLR^{\djump}$ inputs.
+
+\section{Localization and the choice of a random class}\label{sec:application}
+
+Let $X=\Cantor$ with fair-coin measure $\mass$. Write $[\sigma]$ for the
+cylinder with prefix $\sigma$, $x\pre k$ for the first $k$ bits of $x$, and
+$p\preceq v$ for the prefix relation. Juxtaposition denotes concatenation.
+For an oracle $Z$, a $Z$-c.e.\ open set is the union of a $Z$-enumerable
+list of cylinders. A $\Pi^0_1(Z)$ class is the complement of such an open
+set. All computability assertions about functions are in the usual Type-2
+sense.
+
+On $X$ we use the test characterization of $\WThree$ appearing in
+\cite[Open Question~29]{PWY}. A point lies outside $\WThree$ if it belongs
+to a null intersection $\bigcap_n U_n$ of uniformly $\jump$-c.e.\ open
+sets. The $U_n$ can be taken decreasing by forming finite intersections.
+A Martin--L\"of test relative to $Z$ consists of uniformly $Z$-c.e.\ open
+sets $U_n$ with $\mass(U_n)\le 2^{-n}$. A point is in $\MLR^Z$ if it
+avoids the intersection of each such test. On $\RR$ we use the corresponding
+rational open intervals and Lebesgue measure. See also \cite{DH}.
+
+To relate the weak test formulation to the usual effective
+$\Pi^0_3$ null sets on $X$, observe that a $\jump$-c.e.\ open is an
+effective $\Sigma^0_2$ set. Conversely, for an effective $\Sigma^0_2$
+set $E=\bigcup_j P_j$ given as a union of effectively closed sets,
+$\jump$ can cover each $P_j$ by a clopen set of measure less than
+$\mass(P_j)+2^{-n-j-1}$. Indeed, $\jump$ computes $\mass(P_j)$ from
+its decreasing clopen approximations. Taking the union gives a
+$\jump$-c.e.\ open superset of $E$ of excess measure at most $2^{-n}$.
+Applying this uniformly to the $n$th level of a decreasing effective
+$\Sigma^0_2$ presentation of a null $\Pi^0_3$ set covers it by a null
+$\Pi^0_2(\jump)$ set.
+
+A useful model for failure of $\Nprop$ is the first-coordinate projection
+$\pi:X^2\to X$. Each slice $X\times\{t\}$ has product measure zero and
+projects onto $X$. Interleaving bits identifies $X^2$ computably and
+measure-preservingly with $X$. The unrestricted projection, however, can
+send a nonrandom pair $(y,0^\omega)$ to a random $y$. We shall realize the
+slice argument on a closed class $A$ of random inputs. Off $A$ we need a
+different estimate: a small neighborhood of a nonrandom input must have
+an image that can be covered effectively and at bounded cost.
+
+\begin{theorem}[Localization]\label{thm:local}
+Suppose $A\subseteq X$ is a positive-measure $\Pi^0_1(\djump)$ class. There
+is a computable $F:X\to X$ with $F_*\mass=\mass$ and the following properties.
+\begin{enumerate}
+\item\label{it:outside} Each $x\in X\setminus A$ belongs to a cylinder
+  $I\subseteq X\setminus A$ with a constant $c<\infty$ such that, for
+  every oracle $Z$, from an index for a $Z$-c.e.\ open $U$ one can uniformly
+  obtain an index for a $Z$-c.e.\ open $V$ with
+  \[
+       F[U\cap I]\subseteq V,\qquad \mass(V)\le c\,\mass(U\cap I).
+  \]
+\item\label{it:inside} There is a compact $D\subseteq A$ such that
+  $\mass(D)=0$ and $\mass(F[D])\ge\mass(A)$.
+\end{enumerate}
+\end{theorem}
+
+The effective content of part~\eqref{it:outside} is local: for the
+chosen $I$ there is one procedure on open-set indices, valid relative
+to every oracle. Selecting $I$ from $x$ is an existence assertion.
+Part~\eqref{it:inside} asserts compactness in the ordinary topology.
+
+We first deduce the randomness assertion on Cantor space from this theorem.
+The constant in part~\eqref{it:outside} may depend on the cylinder. Once a
+cylinder containing a particular input has been fixed, the same constant
+applies to every layer of a test for that input.
+
+\begin{lemma}\label{lem:reflection}
+For $0<\eps<1$ there is a class $A$ as in Theorem~\ref{thm:local} with
+$\mass(A)\ge1-\eps$ for which $F$ reflects both $\WThree$ and $\MLR^{\djump}$.
+\end{lemma}
+\begin{proof}
+Let $G$ be a layer of a universal $\djump$-Martin--L\"of test of measure
+at most $\eps$ and put $A=X\setminus G$. Then $A\subseteq\MLR^{\djump}
+\subseteq\WThree$. For the second inclusion, the measures of uniformly
+$\jump$-c.e.\ open sets in Cantor space are uniformly left-c.e.\ in
+$\jump$, hence computable in $\djump$. From any decreasing sequence of
+such sets with null intersection, $\djump$ can select a subsequence with
+measures less than $2^{-n}$. It is a test covering that intersection.
+
+If $x\notin\WThree$, take a decreasing test $(U_n)$ with $x\in\bigcap_n U_n$.
+As $x\in G$, part~\eqref{it:outside} of Theorem~\ref{thm:local} gives a cylinder $I$ containing $x$, a constant $c$, and
+uniformly $\jump$-c.e.\ open $V_n$ containing $F[U_n\cap I]$, with
+$\mass(V_n)\le c\mass(U_n)\to0$. Thus $F(x)$ belongs to the null
+intersection $\bigcap_n V_n$ and is outside $\WThree$.
+
+If $x\notin\MLR^{\djump}$, fix $I,c$ as above (since $x\in G$) and an integer $d\ge0$ with $2^d\ge c$. Take a
+$\djump$-Martin--L\"of test $(U_n)$ covering $x$. Apply the same cover procedure
+to $U_{n+d}$. The resulting $V_n$ contain $F(x)$ and have measure at
+most $c\,2^{-(n+d)}\le2^{-n}$. This gives a $\djump$-Martin--L\"of test
+covering $F(x)$.
+\end{proof}
+
+The localization theorem is the remaining Cantor-space assertion. Its proof occupies
+Sections~\ref{sec:code} and~\ref{sec:image}. Section~\ref{sec:real}
+then transports the resulting Cantor-space example to the real line.
+
+\section{Coding with two finite strings}\label{sec:code}
+The construction reads input bits in blocks and distributes them between
+an output string and a temporary string. Bits already output are permanent.
+When an input falls in a selected cylinder, the procedure moves most of
+its temporary bits to the output. Repeated selections will give the local
+cover estimate. On $A$, each fixed initial segment of the temporary string
+eventually survives every selection, providing the second coordinate for
+the slice argument.
+
+\subsection{A computable schedule}
+The program computing $F$ must decide what to do with the next input
+bits using only finite evidence. An enumeration relative to $\djump$
+cannot in general be run by this program. We therefore give each
+candidate cylinder repeated opportunities to act. An input outside $A$
+needs one cylinder that acts at arbitrarily large depths: this will let
+us cover images of arbitrarily small neighborhoods. For an input in $A$,
+we need only ensure that each fixed initial segment of its stored string
+is disturbed finitely often. These two requirements suggest testing
+candidate witnesses repeatedly and allowing a finite number of mistaken
+selections for each unsuccessful witness.
+
+Put $G=X\setminus A$. A $\djump$-c.e.\ list of cylinders for $G$ has a
+$\Sigma^0_3$ index predicate on finite strings. By the arithmetical normal
+form, for some computable $R$ a string $\sigma$ occurs on the list exactly
+when
+\[
+        \exists e\ \forall n\ \exists t\ R(\sigma,e,n,t).
+\]
+Give each pair $(\sigma,e)$ a distinct computably decodable positive
+index $i\ge|\sigma|$, using a computable coding with decidable range. Put
+$I_i=[\sigma]$. Unused indices may be assigned an arbitrary cylinder and
+are never selected. At computably reserved stages visit each used $i$
+infinitely often, with at most one visit per stage $s$ and $i\le s$.
+For example, reserve stages $2^{i-1}(2m+1)$ for $i$, $m\ge0$. At a visit,
+compute the largest $\ell\le s$ such that for all $n<\ell$ some $t\le s$
+satisfies $R(\sigma,e,n,t)$. Select $i$ whenever this length exceeds its
+previous record. At other stages the schedule is idle. If $S$ is the set
+of indices selected infinitely often, this gives
+\begin{equation}\label{eq:schedule}
+             G=\bigcup_{i\in S} I_i .
+\end{equation}
+Indeed, the recorded lengths are unbounded exactly for the pairs satisfying
+the displayed $\forall n\,\exists t$ condition. All stages of the schedule
+are computable. Only the description of their limiting behavior uses $S$.
+
+\subsection{A finite bijection}
+At the beginning of stage $s\ge1$ we have read $N_s=h_s+s$ bits and encoded
+them as a pair $(u_s,v_s)$ of lengths $(h_s,s)$. The string $u_s$ is an
+output prefix. The string $v_s$ stores the other bits. Initially $h_1=1$
+and $(u_1,v_1)$ consists of the first and second input bits, respectively.
+We maintain a bijection
+\begin{equation}\label{eq:bijection}
+   2^{N_s}\longrightarrow 2^{h_s}\times 2^s
+\end{equation}
+with the additional property that for each $j\le s$ we can recover
+$x\pre j$ from $(u_s,v_s\pre j)$.
+
+To derive the update, consider the cost of covering the image of a
+single cylinder of depth $N_s$. A cover by one output cylinder of depth
+$N_s-i$ costs $2^i$ times its input measure, independently of $s$.
+To obtain this bound with a single output cylinder, it suffices to fix
+a further $s-i$ output bits, since $(N_s-i)-h_s=s-i$. The stored
+string supplies exactly that many bits once we reserve the first $i$.
+Those reserved bits, together with $u_s$, recover the input prefix on
+which membership in $I_i$ depends. On a hit we can thus release the
+stored tail to the output and replace it with fresh bits. On a miss
+we can send the fresh bits directly to the output, leaving the entire
+stored string available at the next stage. Both choices have the same
+two string lengths, so the branch need not be signalled by an extra bit.
+
+If the schedule selects $i$ at stage $s$, write $u=u_s$ and $v_s=ab$
+with $|a|=i$. Read a fresh block $c$ of length $s-i$. The intermediate
+state is given by
+\begin{equation}\label{eq:update}
+(u,ab,c)\longmapsto
+\begin{cases}
+ (ub,ac),& x\in I_i,\\
+ (uc,ab),& x\notin I_i .
+\end{cases}
+\end{equation}
+At an idle stage keep the pair unchanged and read no block $c$. In either
+case finish the stage by reading two fresh bits, appending the first to the
+output and the second to the stored string. Thus $h_{s+1}=h_s+s-i+1$ at
+a selection and $h_{s+1}=h_s+1$ at an idle stage.
+
+\smallskip
+\noindent\emph{A finite example.}
+Suppose the first two stages are idle and stage $3$ selects $i=1$
+with $I_i=[1]$. At this point $u$ holds the odd positions of the
+six input bits and $v$ the even positions. Take the fresh block $c=11$.
+The table ends just before the two final bits are appended.
+\[
+\begin{array}{c|ccc|cc}
+ \text{old input} & u & a & b & \text{new output} & \text{new store}\\ \hline
+ 100110 &101&0&10&101\,10&0\,11\\
+ 000110 &001&0&10&001\,11&0\,10
+\end{array}
+\]
+In the first row all four choices of $c$ give the same five output
+bits. This is the promised cover of a six-bit input cylinder at cost
+two. In the second row all four choices preserve the stored string
+$010$. This is the feature used later to define a second coordinate on
+$A$. Both rows represent selections of the same index.
+
+The prefix $a$ is retained in both branches for a reason. Given $u$ and $a$,
+the recovery property decides whether the input belongs to $I_i$. Thus the
+new state records enough information to undo the exchange, even though it
+contains no separate bit recording which branch was taken.
+
+\begin{lemma}\label{lem:finite}
+At each stage the encoding is a computable bijection with the stated
+prefix recovery property. Consequently, for $|p|\le h_s$ and $|q|\le s$,
+\begin{equation}\label{eq:product}
+   \mass\{x:p\preceq u_s(x),\ q\preceq v_s(x)\}
+       =2^{-|p|-|q|}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+At stage~1 the two-bit code is the identity and its output bit
+already recovers the first input bit. Suppose the claim holds at stage $s$.
+In either branch of \eqref{eq:update}, the first $h_s$
+output bits are $u$ and the first $i$ stored bits are $a$. The induction
+hypothesis recovers $x\pre i$ from $(u,a)$. Comparing it with $\sigma_i$,
+where $I_i=[\sigma_i]$ and $|\sigma_i|\le i$, determines the branch.
+To see surjectivity as well as injectivity, take an arbitrary candidate
+intermediate state $(uw,az)$, with $|u|=h_s$, $|a|=i$ and
+$|w|=|z|=s-i$. In the first branch set $(b,c)=(w,z)$, and in the
+second set $(b,c)=(z,w)$. Invert the old code on $(u,ab)$. The recovered
+input has the prefix decoded from $(u,a)$ in either case, so it takes
+exactly the branch used to reconstruct it. The two final bits can be
+stripped off and restored independently.
+
+For $j\le i$, the first $j$ stored bits survive the transition. For
+$i<j\le s$, knowledge of the new output and the first $j$ stored bits
+again identifies the branch. The first $j-i$ bits of $b$ are read from
+the output in the first branch and from the stored string in the second.
+This recovers $(u,v_s\pre j)$, hence $x\pre j$. At an idle stage these
+prefixes are unchanged. For $j=s+1$ the full new state is available, so
+bijectivity recovers the entire input read so far. This completes the
+induction. A uniform input of length $N_s$ gives a uniform pair in
+\eqref{eq:bijection}, which proves \eqref{eq:product}.
+\end{proof}
+
+Set $F(x)=\bigcup_s u_s(x)$. The output extends at every stage, and
+$h_s\ge s$. For a requested output length $n$, a computable search for
+$h_s\ge n$ gives an input bound $N_s$. Thus $F$ is computable and
+continuous. Taking $q$ empty in \eqref{eq:product} shows $F_*\mass=\mass$.
+
+\section{Forward images and the compact witness}\label{sec:image}
+
+\begin{lemma}\label{lem:covers}
+For each $i\in S$, the cylinder $I_i$ satisfies
+Theorem~\ref{thm:local}\,\eqref{it:outside} with $c=2^i$.
+\end{lemma}
+\begin{proof}
+Let $D_0\subseteq I_i$ be a cylinder. Wait for a stage $s$ at which $i$
+is selected and $N_s$ is at least the defining length of $D_0$. For each
+$\tau$ of length $N_s$ with $[\tau]\subseteq D_0$, the old pair $(u,ab)$
+is fixed on $[\tau]$. Its points take the first branch of \eqref{eq:update},
+so $F([\tau])\subseteq[ub]$. The bits of $b$ were read before stage $s$,
+and
+\[
+       |ub|=h_s+s-i=N_s-i,\qquad \mass([ub])=2^i\mass([\tau]).
+\]
+These output cylinders cover $F[D_0]$ with total cost at most
+$2^i\mass(D_0)$. The algorithm waits for a sufficiently late
+selection of $i$. Its termination uses $i\in S$, while the instructions
+for the search are computable from $i$ alone.
+
+From an enumeration of $U\cap I_i$ enumerate disjoint cylinders for its
+union, by taking the difference of each new cylinder with the previous
+finite union. Run the finite-cover procedure on each resulting cylinder
+in parallel and enumerate all outputs into $V$. The total cost bound
+sums to $2^i\mass(U\cap I_i)$. The procedure is uniform in the enumeration
+and the oracle $Z$. Equation~\eqref{eq:schedule} supplies a suitable $i$
+for each $x\notin A$.
+\end{proof}
+
+The same cylinder estimate gives an outer-measure bound for every
+$E\subseteq I_i$, $i\in S$. Cover $E$ by countably many cylinders in
+$I_i$ and take the infimum of the resulting costs to obtain
+\[
+                \mass^*(F[E])\le 2^i\mass^*(E).
+\]
+Equation~\eqref{eq:schedule} now shows that $F$ sends every null subset
+of $G$ to a null set.
+
+\begin{lemma}\label{lem:witness}
+There is a compact null $D\subseteq A$ with $\mass(F[D])\ge\mass(A)$.
+\end{lemma}
+\begin{proof}
+Fix $k\ge1$. From stage $s\ge k$ onward, the first $k$ stored bits can
+change at $x$ only when an $i<k$ is selected and $x\in I_i$. Every
+$i\in S$ has $I_i\cap A=\varnothing$ by \eqref{eq:schedule}. Each of
+the finitely many other indices $i<k$ acts only finitely often. Hence
+there is a single $s_k\ge k$ after which these $k$ bits are constant at
+every point of $A$. They define a map $T:A\to X$ with
+\[
+       T(x)\pre k = v_s(x)\pre k \quad(x\in A,\ s\ge s_k).
+\]
+This is a continuous map since each finite-stage reading is continuous.
+The computation of $F$ only uses the schedule and requires no $s_k$.
+
+Consider the compact set $H=(F,T)[A]$. A fixed second coordinate
+will give a null input fiber. To show that some such fiber has a large
+image we first estimate the product measure of $H$. For $n\ge1$ let
+$\mathcal R_n$ consist of the rectangles $[p]\times[q]$ meeting $H$
+with $|p|=|q|=n$, and put $H_n=\bigcup\mathcal R_n$.
+
+\smallskip
+\noindent\textit{Claim.} For $s\ge s_n$ let $E_{n,s}$ consist of all
+$x\in X$ whose two stage-$s$ readings begin with a pair $(p,q)$
+indexing a rectangle in $\mathcal R_n$. Then
+\[
+ A\subseteq E_{n,s},\qquad
+ \mass(E_{n,s})=(\mass\times\mass)(H_n).
+\]
+Indeed, at each $x\in A$ the two prefixes read at stage $s$ coincide
+with the prefixes of $F(x)$ and $T(x)$, so their rectangle meets $H$.
+For the equality fix one rectangle. Its prefixes specify $n$ of the
+$h_s$ output bits and $n$ of the $s$ stored bits. They leave exactly
+$2^{h_s-n}2^{s-n}=2^{N_s-2n}$ complete states available. Each has
+exactly one input word of length $N_s$ by Lemma~\ref{lem:finite}.
+Consequently the inputs for this rectangle occupy measure
+$2^{N_s-2n}2^{-N_s}=2^{-2n}$, its product measure. Distinct rectangles
+give disjoint input sets. Summing over $\mathcal R_n$ proves the claim.
+
+This count uses the bijection on the whole input space. Restriction to
+$A$ enters only through the inclusion in the claim. Since $H$ is closed,
+every point outside it has a prefix rectangle disjoint from it. Hence
+$H_n\downarrow H$, and continuity of the finite product measure gives
+\begin{equation}\label{eq:mass}
+ (\mass\times\mass)(H)=\lim_n(\mass\times\mass)(H_n)\ge\mass(A).
+\end{equation}
+
+Fix $t\in X$. In the input space the fiber $D_t=T^{-1}(\{t\})$ is
+compact, since $T$ is continuous on the compact set $A$. Each $x\in
+D_t$ must already display $t\pre n$ in the first $n$ stored positions
+at stage $s_n$. By \eqref{eq:product} this condition on the whole input
+space has measure $2^{-n}$. Letting $n$ increase gives $\mass(D_t)=0$
+for every $t$.
+
+In the product space the same choice of $t$ gives the section
+$H^t=\{y:(y,t)\in H\}$. By definition $(y,t)\in H$ exactly when there
+is an $x\in A$ with $T(x)=t$ and $F(x)=y$. Thus $H^t=F[D_t]$.
+Applying Fubini's theorem to the indicator of the compact set $H$ yields
+\[
+  \int_X \mass(F[D_t])\,d\mass(t)=(\mass\times\mass)(H)\ge\mass(A).
+\]
+Some $t$ has $\mass(F[D_t])\ge\mass(A)$: otherwise the positive
+difference $\mass(A)-\mass(F[D_t])$ would have positive integral.
+This $D_t$ is the required witness.
+\end{proof}
+Lemmas~\ref{lem:covers} and \ref{lem:witness} complete the proof of
+Theorem~\ref{thm:local}.
+
+\section{A computable function on the real line}\label{sec:real}
+
+The two changes of space serve different purposes. An embedding into a
+positive-measure Cantor set on the input side keeps real null tests null
+when pulled back to $X$. Binary evaluation on the output side preserves
+the lower bound for the image measure. Affine interpolation extends the
+map across the gaps.
+
+\begin{lemma}[Effective embedding and measure scaling]\label{lem:embed}
+There is a positive-measure Cantor set $C\subseteq[0,1]$ and a
+computable homeomorphism $h:X\to C$ with $h_*\mass=2\lebesgue\pre C$.
+\end{lemma}
+\begin{proof}
+Start with $[0,1]$ and
+use two closed subintervals abutting opposite ends of each parent.
+Choose the common length at depth $n$ to be
+\[
+            L_n=2^{-n-1}(1+2^{-n}).
+\]
+Since $L_0=1$ and $2L_{n+1}<L_n$, the two children are disjoint and their
+endpoints are rational. Let $C$ be the intersection of all levels.
+Following the left and right children defines a computable homeomorphism
+$h:X\to C$. If $|\sigma|=n$, then
+$\lebesgue(h([\sigma]))=\lim_{m\to\infty}2^{m-n}L_m=2^{-n-1}$. Thus,
+with $b:X\to[0,1]$ the usual binary expansion map,
+\begin{equation}\label{eq:push}
+       h_*\mass=2\,\lebesgue\pre C,\qquad b_*\mass=\lebesgue\pre[0,1].
+\end{equation}
+
+Indeed, the branch measures determine the restricted measure on $C$,
+and each dyadic interval has the corresponding binary cylinder as its
+preimage up to endpoints of measure zero. For the inverse of $h$ on
+$C$, at each depth the finitely many rational closed intervals are
+separated by positive gaps, so the unique interval containing the
+given point can be identified from a sufficiently precise approximation.
+\end{proof}
+
+\begin{lemma}[Computable extension]\label{lem:extend}
+For the map $F$ constructed in Section~\ref{sec:code}, the prescribed
+values $bFh^{-1}$ on $C$ extend to a computable continuous
+$g:\RR\to[0,1]$ by affine interpolation on the gaps and constant
+extension on the exterior rays.
+\end{lemma}
+\begin{proof}
+
+Define $g(h(x))=b(F(x))$ on $C$. Interpolate affinely on each bounded
+complementary interval in $[0,1]$ and extend constantly on each outside
+ray. To see that $g$ is computable, for any $k$ compute a level $m$ so
+that $F$ has the same first $k$ output bits throughout each input
+cylinder of length $m$. The oscillation of $bF$ on such a cylinder is
+at most $2^{-k}$. At each endpoint of the level-$m$ intervals the
+prescribed value is computable, since the corresponding path has a
+constant tail. Linear interpolation between consecutive endpoints agrees
+with $g$ on the earlier gaps. Within each retained interval both
+interpolations take values in the closed convex hull of its values on
+$C$, an interval of length at most $2^{-k}$. Approximating the endpoint
+values by rationals to within $2^{-k}$ gives a rational polygonal
+approximation with uniform error at most $2^{1-k}$. This also controls
+the extensions on the rays.
+
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Choose $A,F$ by Lemma~\ref{lem:reflection}, take $D$ from
+Lemma~\ref{lem:witness}, and let $g$ be the extension of
+Lemma~\ref{lem:extend}. For a point in $C$ we follow a failed test
+through three spaces. We pull a real test back along $h$, apply
+reflection for $F$, and then cover the binary image of a failed test
+by real intervals.
+
+We verify reflection first at $h(x)\in C$. The inverse images under $h$
+of uniformly $Z$-c.e.\ open sets are uniformly $Z$-c.e.\ open, and
+\eqref{eq:push} gives $\mass(h^{-1}(U))\le2\lebesgue(U)$. If $h(x)$
+fails weak 3-randomness, pulling back its null test shows that $x$ fails
+as well. For a Martin--L\"of test relative to $\djump$, pull back the
+$(n+1)$st layer to obtain the $n$th layer on $X$. In either case
+Lemma~\ref{lem:reflection} transfers failure of the test notion to $F(x)$.
+
+For a $Z$-c.e.\ open $U\subseteq X$, enumerate the interiors of the
+dyadic intervals $b([\sigma])$ for a disjoint cylinder enumeration of
+$U$. Their union $W$ has $\lebesgue(W)\le\mass(U)$ and contains every
+nondyadic point of $b[U]$. Applying this operation to test layers
+transfers nonrandomness of $z$ to $b(z)$ when $b(z)$ is nondyadic.
+For a weak test on $X$ the layers can be chosen decreasing with measures
+tending to zero, so the resulting intersection is again null. Dyadic
+outputs are computable and fail both randomness notions. With $z=F(x)$
+this proves the asserted reflection on $C$.
+
+On a complementary interval, $g$ agrees with a computable affine map
+$r\mapsto ar+d$. For $a\ne0$ its action sends effective opens to effective
+opens, commutes with intersections by injectivity, and multiplies Lebesgue
+measure by $|a|$. A fixed shift of the layer index absorbs this factor in
+a Martin--L\"of test. If $a=0$ the value is computable, as are the
+constants on the outside rays. This proves reflection on all of $\RR$.
+
+The case split on the slope is used only to prove reflection at a
+given point. The polygonal approximation computes $g$ uniformly across
+all the gaps without deciding whether any slope is zero.
+
+Finally put $B=h[D]$. It is compact and \eqref{eq:push} gives
+$\lebesgue(B)=\mass(D)/2=0$. Since $F[D]$ is compact, the same identities
+give
+\[
+   \lebesgue(g[B])
+   =\mass\bigl(b^{-1}(g[B])\bigr)
+   \ge\mass(F[D])\ge\mass(A)\ge1-\eps . \qedhere
+\]
+\end{proof}
+
+\begin{thebibliography}{HPZZ}
+\bibitem[DH]{DH}
+R.~G. Downey and D.~R. Hirschfeldt,
+\emph{Algorithmic Randomness and Complexity}, Theory and Applications of
+Computability, Springer, New York, 2010.
+\href{https://doi.org/10.1007/978-0-387-68441-3}{doi:10.1007/978-0-387-68441-3}.
+\bibitem[HPZZ]{HPZZ}
+P. Holick\'y, S.~P. Ponomarev, L. Zaj\'i\v cek and M. Zelen\'y,
+Structure of the set of continuous functions with Luzin's property (N),
+\emph{Real Anal. Exchange} \textbf{24} (1998/99), no.~2, 635--656.
+
+\bibitem[PWY]{PWY}
+A. Pauly, L. Westrick and L. Yu,
+Luzin's (N) and randomness reflection,
+\emph{J. Symb. Log.} \textbf{87} (2022), no.~2, 802--828.
+\href{https://doi.org/10.1017/jsl.2020.73}{doi:10.1017/jsl.2020.73}.
+\bibitem[W]{W}
+L. Westrick,
+\emph{Luzin's (N) and randomness reflection},
+Midwest Computability Seminar with the CTA Online Seminar,
+December~8, 2020, slides~9 and~15.
+\href{https://math.uchicago.edu/~drh/mcs/westrick_slides.pdf}{Seminar slides}.
+\end{thebibliography}
+\end{document}

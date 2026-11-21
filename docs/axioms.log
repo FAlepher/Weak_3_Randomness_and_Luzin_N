@@ -1,0 +1,7 @@
+'Guo.weakThreeRandomness_and_realNullImage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Guo.exists_reflecting_not_luzinN' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Guo.cantor_localization' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Guo.cantor_reflection_large_class' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Guo.stage_bijective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Guo.candidate_recurrent_index_cover' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Guo.compact_null_witness' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,91 @@
+import Weak_3_Randomness_and_Luzin_N.GuoSelectedStage
+import Weak_3_Randomness_and_Luzin_N.GuoFiniteStages
+import Weak_3_Randomness_and_Luzin_N.GuoCantorCoding
+import Weak_3_Randomness_and_Luzin_N.GuoLocalFinite
+import Weak_3_Randomness_and_Luzin_N.GuoScheduleRecords
+import Weak_3_Randomness_and_Luzin_N.GuoCandidateSchedule
+import Weak_3_Randomness_and_Luzin_N.GuoCantorMeasure
+import Weak_3_Randomness_and_Luzin_N.GuoCantorTopology
+import Weak_3_Randomness_and_Luzin_N.GuoCover
+import Weak_3_Randomness_and_Luzin_N.GuoWitness
+import Weak_3_Randomness_and_Luzin_N.GuoReflection
+import Weak_3_Randomness_and_Luzin_N.GuoLocalization
+import Weak_3_Randomness_and_Luzin_N.GuoEnumeratedOpen
+import Weak_3_Randomness_and_Luzin_N.GuoEnumeratedCover
+import Weak_3_Randomness_and_Luzin_N.GuoRealTransfer
+import Weak_3_Randomness_and_Luzin_N.GuoBinaryMeasure
+import Weak_3_Randomness_and_Luzin_N.GuoFatCantor
+import Weak_3_Randomness_and_Luzin_N.GuoOracleCover
+import Weak_3_Randomness_and_Luzin_N.GuoOracleJump
+import Weak_3_Randomness_and_Luzin_N.GuoOracleMeasure
+import Weak_3_Randomness_and_Luzin_N.GuoOracleRates
+import Weak_3_Randomness_and_Luzin_N.GuoAffineExtension
+import Weak_3_Randomness_and_Luzin_N.GuoCandidateComputable
+import Weak_3_Randomness_and_Luzin_N.GuoOracleBudget
+import Weak_3_Randomness_and_Luzin_N.GuoRealOracleTests
+import Weak_3_Randomness_and_Luzin_N.GuoRealOraclePullback
+import Weak_3_Randomness_and_Luzin_N.GuoStageComputable
+import Weak_3_Randomness_and_Luzin_N.GuoCoverWordsComputable
+import Weak_3_Randomness_and_Luzin_N.GuoRefinementComputable
+import Weak_3_Randomness_and_Luzin_N.GuoKernelComputable
+import Weak_3_Randomness_and_Luzin_N.GuoCandidateNormalForm
+import Weak_3_Randomness_and_Luzin_N.GuoOracleCode
+import Weak_3_Randomness_and_Luzin_N.GuoOracleCompiler
+import Weak_3_Randomness_and_Luzin_N.GuoOraclePlug
+import Weak_3_Randomness_and_Luzin_N.GuoOracleReplay
+import Weak_3_Randomness_and_Luzin_N.GuoOracleUniversal
+import Weak_3_Randomness_and_Luzin_N.GuoOracleNormalForm
+import Weak_3_Randomness_and_Luzin_N.GuoJumpArithmetic
+import Weak_3_Randomness_and_Luzin_N.GuoEndpointComputable
+import Weak_3_Randomness_and_Luzin_N.GuoCombined
+import Weak_3_Randomness_and_Luzin_N.GuoConcreteReflection
+import Weak_3_Randomness_and_Luzin_N.GuoPolygon
+import Weak_3_Randomness_and_Luzin_N.GuoGapEndpoints
+import Weak_3_Randomness_and_Luzin_N.GuoEndpointTests
+import Weak_3_Randomness_and_Luzin_N.GuoOutsideReflectionCodes
+import Weak_3_Randomness_and_Luzin_N.GuoOutsideReflection
+import Weak_3_Randomness_and_Luzin_N.GuoOutsideReflectionBridge
+import Weak_3_Randomness_and_Luzin_N.GuoOutsideCandidate
+import Weak_3_Randomness_and_Luzin_N.GuoTypeTwoVertices
+import Weak_3_Randomness_and_Luzin_N.GuoTypeTwoInterpolation
+import Weak_3_Randomness_and_Luzin_N.GuoTypeTwoGrid
+import Weak_3_Randomness_and_Luzin_N.GuoTypeTwo
+import Weak_3_Randomness_and_Luzin_N.GuoRealRationalBasis
+import Weak_3_Randomness_and_Luzin_N.GuoCoverIndex
+import Weak_3_Randomness_and_Luzin_N.GuoEffectiveLocalization
+import Weak_3_Randomness_and_Luzin_N.GuoMain
+
+/-!
+# 论文形式化的审查入口
+
+* 定理 1.1 对应 `weakThreeRandomness_and_realNullImage`。
+  同一 Type-2 可计算连续函数反射两类随机性，并把某个紧零集映为测度至少 `1 - ε` 的集合。
+  `exists_reflecting_not_luzinN` 给出 Luzin (N) 性质的反例。
+* 定理 2.1 对应 `cantor_localization`。对二阶跳跃有效闭类给出可计算保测映射，
+  以及类外实际柱集上的统一程序索引变换和类内紧零集见证。
+* 引理 2.2 对应 `cantor_reflection_large_class`。同一个映射实现定位定理的结论及两类反射。
+  `exists_universalMartinLofTest_secondJump` 通过有限 oracle 表回放构造完备相对枚举，
+  再统一裁剪预算。相对有限交见 `oracleOpenTestFramework`，跳跃下的小测度层搜索见
+  `oracleJump_finds_small_layers` 和 `oracleJump_effectiveRateSearch`。
+* §3.1 对应 `candidate_recurrence_iff` 和 `candidate_coverage`。预约时间由自然数配对给出。
+  `candidateIndex` 给每个柱词与证书对安排唯一的正索引。见证关系原始递归时，
+  选中指标和输出长度也原始递归。
+  `secondJump_openLayer_normalForm` 从具体二阶跳跃下的有效开集推出调度所需的
+  柱集正规形。数值程序索引到有限表回放程序的变换为原始递归。
+* 引理 3.1 对应 `stage_bijective`、`stage_recovers_prefix` 和
+  `fairCoin_stageReadingEvent`。`stageRead_listState_primrec` 验证有限编码程序，
+  `cantorOutput_measurePreserving` 从柱集推广到整个测度。
+* 引理 4.1 对应 `candidate_recurrent_index_cover`。固定任一反复选中的柱集，
+  经过核验的有限覆盖核给出同一 oracle 下的有效覆盖及测度代价。
+* 引理 4.2 对应 `compact_null_witness`。输入是紧类及循环选中的柱集与它不相交的条件。
+  `cantor_localization_from_normal_form` 将这个条件从补集的候选表示推出。
+* 引理 5.1 的拓扑同胚及测度缩放见 `fatCantorHomeomorph`、`fatAddress_map_fairCoin`。
+  `retainedIntervalCode_primrec` 给出有限柱区间的有效编码；从实数快速名字计算逆地址前缀
+  尚未单列为定理。式 (6) 的另一条推前恒等式见 `binaryEvaluation_map_fairCoin`。
+* 引理 5.2 的延拓由 `realAffineExtension` 给出。其 Type-2 求值见下述折线构造。
+  `rationalOracleUniformOpen_iff_real` 连接有理与二进有理区间的统一枚举。
+  胖 Cantor 集上，输入测试沿嵌入拉回，输出测试经二进制求值传递。
+  `candidate_realAffineExtension_reflects_outside` 处理两类测试在互补区间和射线上的反射。
+  `candidate_realAffineExtension_typeTwoComputable` 用有理折线求值把任意实数的快速 Cauchy 名
+  变换为函数值的快速 Cauchy 名。
+-/
